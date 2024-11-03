@@ -1,7 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:flutter_masked_text/flutter_masked_text.dart';
-import 'widgets/logo.widget.dart';
-import 'widgets/input.widget.dart';
+import 'pages/home.page.dart';
 
 void main() {
   runApp(MyApp());
@@ -18,26 +16,6 @@ class MyApp extends StatelessWidget {
         visualDensity: VisualDensity.adaptivePlatformDensity,
       ),
       home: HomePage(),
-    );
-  }
-}
-
-class HomePage extends StatelessWidget {
-  var _gasCtrl = new MoneyMaskedTextController();
-
-  @override
-  Widget build(BuildContext context) {
-    return Scaffold(
-      backgroundColor: Theme.of(context).primaryColor,
-      body: ListView(
-        children: <Widget>[
-          Logo(),
-          Input(
-            ctrl: _gasCtrl,
-            label: "Gasolina",
-          ),
-        ],
-      )
     );
   }
 }
